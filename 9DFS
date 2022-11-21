@@ -1,0 +1,24 @@
+myGraph = {
+    '1': ['2', '3'],
+    '2': ['5', '6'],
+    '3': ['9', '10'],
+    '5': ['10', '15'],
+    '6': ['12', '18'],
+    '10': [],
+    '15': [],
+    '12': [],
+    '18': [],
+    '9': [], }
+eleVisited = set()
+
+
+def dfsImplementation(eleVisited, myGraph, myNode):
+    if myNode not in eleVisited:
+        print(myNode, end=" ")
+        eleVisited.add(myNode)
+        for neighbour in myGraph[myNode]:
+            dfsImplementation(eleVisited, myGraph, neighbour)
+
+
+print("Following is the Depth-First Search")
+dfsImplementation(eleVisited, myGraph, '1')
