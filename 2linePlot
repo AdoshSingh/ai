@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+emp_countA = [3, 20, 50, 200, 350, 400]
+emp_countB = [250, 300, 325, 380, 320, 350]
+year = [2014, 2015, 2016, 2017, 2018, 2019]
+
+plt.plot(year, emp_countA, 'o-g')
+plt.plot(year, emp_countB, 'o-b')
+
+plt.xlabel("Year")
+plt.ylabel("Employees")
+
+plt.title("Employee Growth")
+
+plt.legend(['A', 'B'])
+plt.show()
