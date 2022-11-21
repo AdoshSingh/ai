@@ -1,0 +1,11 @@
+import pandas as pd
+
+
+def readcsv():
+    data = pd.read_csv("C:\AI_LabFile\cities.csv", encoding="UTF-8")
+    print(data.columns)
+    print(data['LatD'][0])
+    return data
+
+
+readcsv()
