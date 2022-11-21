@@ -1,0 +1,15 @@
+import nltk
+
+nltk.download('punkt')
+text = "I want to tokenize input file in python please suggest me i am new user of python."
+word_tokens = nltk.word_tokenize(text)
+
+unique_words = set(word_tokens)
+
+print(unique_words)
+word_count = dict.fromkeys(unique_words, 0)
+for word in unique_words:
+    for check in word_tokens:
+        if check == word:
+            word_count[word] += 1
+print(word_count)
