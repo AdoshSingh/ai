@@ -1,0 +1,31 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+y = np.random.randint(low=0, high=100, size=10)
+
+plt.bar(x, y)
+plt.xlabel('Categories')
+plt.ylabel("Values")
+plt.title('Categories Bar Plot')
+plt.show()
+
+plt.barh(x, y)
+plt.xlabel("Values")
+plt.ylabel('Categories')
+plt.title('Horizontal Bar Plot')
+plt.show()
+
+plt.bar(x, y, color=['firebrick', 'green', 'blue', 'black', 'red',
+                     'purple', 'seagreen', 'skyblue', 'black', 'tomato'])
+plt.xlabel('Categories')
+plt.ylabel("Values")
+plt.title('Barplot with colored bars')
+plt.show()
+
+x = [7, 14, 21, 28, 35, 42, 49]
+y = [8, 13, 21, 30, 31, 44, 50]
+
+plt.plot(x, y)
+plt.show()
